@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular</title>
+</head>
+<body>
+<form action="https://gibm.becknet.ch/formular/formular.php" method="post">
+    <fieldset>
+    <legend>Kontaktformular</legend>
+    <label for="anrede" title="Wählen Sie Ihre gewünschte Anrede an">Anrede *</label> <br>
+    <input type="radio" name="anrede" id="frau" value="Frau" title="für weibliche Anrede" required>
+    <label for="frau" title="für weibliche Anrede">Frau</label>
+    <input type="radio" name="anrede" id="herr" value="Herr" title="für männliche Anrede">
+    <label for="herr" title="für männliche Anrede">Herr</label>
+    <input type="radio" name="anrede" id="anderes" value="Anderes" title="für geschlechtsneutrale Anrede">
+    <label for="anderes"title="für geschlechtsneutrale Anrede">Anderes</label><br>
+
+    <label for="vorname">Vorname *</label> <br>
+    <input type="text" name="vorname" id="vorname" minlength="2" maxlength="100" required> <br>
+    <label for="nachname">Nachname *</label> <br>
+    <input type="text" name="nachname" id="nachname" minlength="2" maxlength="100" required> <br>
+    <label for="strasse">Strasse *</label> <br>
+    <input type="text" name="strasse" id="strasse" maxlength="100" required> <br>
+    <label for="plz">PLZ *</label><label for="ort">/Ort</label> <br>
+    <input type="number" name="plz" id="plz" min="1000" max="9999" size="4" required>
+    <input type="text" name="ort" id="ort" maxlength="100"><br>
+    <label for="email">Email *</label><br>
+    <input type="email" name="email" id="email" maxlength="100" required> <br>
+    <label for="nachricht">Nachricht</label> <br>
+    <textarea name="nachricht" id="nachricht" maxlength="500" rows="5" cols="31" placeholder="Schreibe hier deine Nachricht..."></textarea><br>
+    <input type="submit" formtarget="_blank" value="Senden">
+    <input type="reset" value="Löschen">
+    </fieldset>
+</form>
+</body>
+</html>

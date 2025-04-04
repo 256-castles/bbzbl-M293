@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versuch</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Neuer Kalendereintrag</title>
 </head>
 <body>
-    <h1>Test1</h1>
-    <p>Funktionierts?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempora minus quas eius provident dicta earum magni. Omnis, aut ipsum nihil soluta maxime animi, reiciendis tempora dignissimos iste a autem.</p>
+<form action="https://gibm.becknet.ch/formular/formular.php" method="post">
+    <fieldset>
+    <legend>Neuer Eintrag</legend>
+    <label for="kategorie">Kat.</label>
+    <select id="kategorie" name="kategorie">
+        <option value="">---</option>
+        <option value="meeting">Meeting</option>
+        <option value="event">Event</option>
+        <option value="gipfeltreffen">Gipfeltreffen</option>
+        <option value="warnung">Warnung</option>
+        <option value="ferien">Ferien</option>
+    </select><br>
+    <label for="titel">Titel *</label> <br>
+    <input  type="text"
+            name="titel"
+            id="titel"
+            maxlength="100"
+            title="Titel des Kalendereintrags"
+            placeholder="Meeting, Abgabe, Prüfung..."
+            required>
+    <label for="wichtig">Pin</label>
+    <input type="checkbox" name="wichtig" id="wichtig" value="true">
+    <br>
+    <label for="datum">Datum *</label> <br>
+    <input type="date" name="datum" id="datum" required> <br>
+    <label for="zeit">Uhrzeit</label> <br>
+    <input type="time" name="zeit" id="zeit"> <br>
+    <label for="beschrieb">Beschrieb:</label> <br>
+    <textarea name="beschrieb" id="beschrieb" maxlength="100" rows="1" cols="50" placeholder="Zusätzliche Infos..."></textarea><br>
+    </fieldset>
+    <input type="submit" formtarget="_blank" value="Senden">
+    <input type="reset" value="Löschen">
+</form>
 </body>
 </html>
